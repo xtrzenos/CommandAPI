@@ -1,3 +1,5 @@
+using System;
+using AutoMapper;
 using CommandAPI.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,9 +32,11 @@ namespace CommandAPI
             services.AddDbContext<CommandContext>(opt => opt.UseNpgsql(builder.ConnectionString));
             
             services.AddControllers();
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             
             // services.AddScoped<ICommandApiRepo, MockCommandApiRepo>();
-            services.AddScoped<ICommandApiRepo, SqlCommandAPIRepo>();
+            services.AddScoped<ICommandApiRepo, SqlCommandApiRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
