@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
+// ReSharper disable InconsistentNaming
+// ReSharper disable UnusedType.Global
 
 namespace CommandAPI.Migrations
 {

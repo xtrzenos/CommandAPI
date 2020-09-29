@@ -2,7 +2,6 @@
 using AutoMapper;
 using CommandAPI.Data;
 using CommandAPI.Dtos;
-using CommandAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CommandAPI.Controllers
